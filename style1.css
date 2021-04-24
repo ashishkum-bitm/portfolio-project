@@ -220,7 +220,7 @@ nav a:hover {
 
 #about_box_2 {
   color: white;
-  background-color: rgb(99, 93, 93);
+  background-color: #555156;
   box-sizing: border-box;
   flex: 2;
   z-index: 1;

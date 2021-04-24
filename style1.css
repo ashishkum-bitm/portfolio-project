@@ -33,8 +33,7 @@ body {
 
 /*------------------------ navigation panel----------------------- */
 
-nav {
-  display: flex;
+nav{
   justify-content: space-around;
   background-color: #e7e7e7;
   padding: 10px;
@@ -44,43 +43,23 @@ nav {
   z-index: 100;
   top: 5px;
 }
-nav .name {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+label.logo{
+  color: rgb(12, 10, 10);
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
 }
-nav .name a {
-  text-decoration: none;
-  background-color: #e0e0e0;
-  color: #dc6723e0;
-  font-family: "", sans-serif;
-  font-size: 50px;
-  padding: 10px 10px;
-  border-radius: 50px;
-  transition: box-shadow 0.2s;
+nav ul{
+  float: right;
+  margin-right: 20px;
 }
-nav .name a:hover {
-  background-color: #15191a;
-  transition: box-shadow 0.4s;
-  box-shadow: inset 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
 }
-nav .name a span {
-  font-size: 20px;
-}
-nav .navigation ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-}
-nav .navigation {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-nav .navigation ul li {
-  margin: 0px 10px;
-}
-nav .navigation ul li a {
+nav ul li a{
   text-decoration: none;
   padding: 10px 20px;
   font-family: "Roboto", sans-serif;
@@ -89,26 +68,65 @@ nav .navigation ul li a {
   transition: background-color 0.2s;
   border-radius: 50px;
 }
-nav .navigation ul li a:hover {
+.nav a:hover{
   background-color: #3b3636;
   transition: background-color 0.4s;
   color: #d84400;
 }
-nav .burger-wrap {
-  padding: 10px 20px;
+.checkbtn{
+  font-size: 30px;
+  color: #000000;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
   display: none;
 }
-nav .burger-wrap .burger {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 10px;
-  border-radius: 50%;
-  color: #be2121;
+#check{
+  display: none;
 }
-nav .burger-wrap .burger:hover {
-  background-color: #e0e0e0;
+@media (max-width: 920px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  #check:checked ~ .checkbtn i::before{
+    content: "\f00d";
+  }
+  ul{
+    position: fixed;
+    width: 75%;
+    height: 100vh;
+    background: #e7e7e7;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  .nav a:hover{
+  background-color: #3b3636;
+  transition: background-color 0.4s;
   color: #d84400;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
 }
 
 /*--------------------------- landing page------------------------------- */
@@ -118,7 +136,7 @@ nav .burger-wrap .burger:hover {
   padding: 100px 10px 20px 10px;
   display: flex;
   background-image: url("images/background.jpg");
-  background-size: 100%;
+  background-size:100%;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -262,9 +280,10 @@ nav .burger-wrap .burger:hover {
   align-items: center;
   justify-content: space-between;
 }
-.skill-container .skills .skill-box span img {
+.skill-container .skills .skill-box span img{
   width: 60px;
 }
+
 
 /*--------------------- project page----------------------------- */
 
@@ -336,7 +355,7 @@ nav .burger-wrap .burger:hover {
 }
 .project-container .project-box .project a .description p span {
   font-weight: bold;
-
+  
   font-size: 20px;
 }
 .project-container .project-box .project:hover {
@@ -354,7 +373,7 @@ nav .burger-wrap .burger:hover {
   border-top: 2px solid #000000;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content:center;
 }
 .contact-container h1 {
   font-size: 50px;
@@ -372,54 +391,54 @@ nav .burger-wrap .burger:hover {
   justify-content: center;
   text-align: center;
 }
-.social {
+.social{
   padding-top: 50px;
   padding-left: 35rem;
   text-align: center;
 }
-.social ul {
+.social ul{
   position: absolute;
-  transform: translate(-50%, -50%);
-  display: flex;
+  transform:translate(-50%,-50%);
+  display:flex;
   padding-bottom: 50px;
   margin-left: 7rem;
   margin-right: 7rem;
 }
-.social ul li {
+.social ul li{
   list-style: none;
-  margin: 0 15px;
+  margin:0 15px;
 }
-.social ul li .fa {
+.social ul li .fa{
   font-size: 30px;
   line-height: 50px;
-  transition: 0.6s;
+  transition: .6s;
   color: #ffffff;
 }
-.social ul li .fa:hover {
-  color: #000000;
+.social ul li .fa:hover{
+  color:#000000;
 }
-.social ul li a {
+.social ul li a{
   position: relative;
   display: block;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #42a259;
+  background-color:#42a259;
   text-align: center;
-  transition: 0.6s;
+  transition: .6s;
 }
-.social ul li a:hover {
-  transform: translate(0, -10px);
+.social ul li a:hover{
+  transform:translate(0,-10px);
 }
-.social ul li:nth-child(1) a:hover {
+.social ul li:nth-child(1) a:hover{
   background-color: #3b5999;
 }
-.social ul li:nth-child(2) a:hover {
+.social ul li:nth-child(2) a:hover{
   background-color: #e4405f;
 }
-.social ul li:nth-child(3) a:hover {
+.social ul li:nth-child(3) a:hover{
   background-color: #b92b27;
 }
-.social ul li:nth-child(4) a:hover {
-  background-color: #0077b5;
+.social ul li:nth-child(4) a:hover{
+  background-color: #0077B5;
 }
